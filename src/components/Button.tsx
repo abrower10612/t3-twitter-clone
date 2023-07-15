@@ -3,7 +3,7 @@ import React from "react";
 type Props = {
   small?: boolean;
   gray?: boolean;
-  className?: string | undefined;
+  className?: string;
 } & React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
@@ -17,7 +17,9 @@ const Button = ({ small = false, gray = false, className }: Props) => {
 
   return (
     <button
-      className={`rounded-full text-white transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50 ${sizeClasses} ${colorClasses} ${className}`}
+      className={`rounded-full text-white transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50 ${sizeClasses} ${colorClasses} ${
+        className || ""
+      }`}
     >
       Tweet
     </button>
