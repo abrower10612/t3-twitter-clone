@@ -14,7 +14,7 @@ const SideNav = () => {
         </li>
         {user !== null && (
           <li>
-            <Link href={`/profiles/${user?.id}`}>Profile</Link>
+            <Link href={`/profiles/${user?.id || ""}`}>Profile</Link>
           </li>
         )}
         <li>
