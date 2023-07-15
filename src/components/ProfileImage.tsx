@@ -6,13 +6,13 @@ type Props = {
   className?: string;
 };
 
-const ProfileImage = (props: Props) => {
+const ProfileImage = ({ src, className }: Props) => {
   return (
     <div
-      className={`relative h-12 w-12 overflow-hidden rounded-full ${props.className}`}
+      className={`relative h-12 w-12 overflow-hidden rounded-full ${className}`}
     >
-      {props.src == null ? null : (
-        <Image src={props.src} alt="Profile Image" quality={100} fill />
+      {src == null ? null : (
+        <Image src={src} alt="Profile Image" quality={100} fill />
       )}
     </div>
   );
