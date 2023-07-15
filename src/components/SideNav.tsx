@@ -19,9 +19,9 @@ const SideNav = () => {
         )}
         <li>
           {user != null ? (
-            <button onClick={() => signOut()}>Log Out</button>
+            <button onClick={() => void signOut()}>Log Out</button>
           ) : (
-            <button onClick={() => signIn()}>Log In</button>
+            <button onClick={() => void signIn()}>Log In</button>
           )}
         </li>
       </ul>
