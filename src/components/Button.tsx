@@ -3,7 +3,7 @@ import React from "react";
 type Props = {
   small?: boolean;
   gray?: boolean;
-  className?: string;
+  className?: string | undefined;
 } & React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement

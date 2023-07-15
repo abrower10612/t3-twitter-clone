@@ -3,7 +3,7 @@ import React from "react";
 
 type Props = {
   src?: string | null;
-  className?: string;
+  className?: string | undefined;
 };
 
 const ProfileImage = ({ src, className }: Props) => {
